@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Inicio de Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="loginForm">
+    <ion-item>
+      <ion-label>
+        Email
+      </ion-label>
+      <ion-input type="text" formControlName="email" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Contraseña
+      </ion-label>
+      <ion-input type="text" formControlName="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+    <ion-item-divider>
+      <ion-button size="small" (click)="onLogin()">Iniciar Sesión</ion-button>
+      <ion-button size="small" href="/registro">Registro</ion-button>
+    </ion-item-divider>
+  </form>
+</ion-content>
